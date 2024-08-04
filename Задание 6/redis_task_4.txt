@@ -1,0 +1,2 @@
+zrangestore highrating movie.rating.index 8.7 inf BYSCORE
+sort highrating by *->rating get *->name

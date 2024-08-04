@@ -1,0 +1,13 @@
+hmset movie:1 name "Avatar" year 2009 genre "Sci-fi" rating 7.9 country "USA" budget 237000000 age_restriction "12+"
+hmset movie:2 name "Avengers: Endgame" year 2019 genre "Superhero" rating 8.4 country "USA" budget 400000000 age_restriction "16+"
+hmset movie:3 name "Avatar: The Way of Water" year 2022 genre "Sci-fi" rating 7.7 country "USA" budget 460000000 age_restriction "12+"
+hmset movie:4 name "Titanic" year 1997 genre "Disaster" rating 7.9 country "USA" budget 200000000 age_restriction "12+"
+hmset movie:5 name "Star Wars: The Force Awakens" year 2015 genre "Space opera" rating 7.8 country "USA" budget 447000000 age_restriction "12+"
+hmset movie:6 name "Avengers: Infinity War" year 2018 genre "Superhero" rating 8.4 country "USA" budget 400000000 age_restriction "16+"
+hmset movie:7 name "Spider-Man: No Way Home" year 2021 genre "Superhero" rating 8.2 country "USA" budget 200000000 age_restriction "12+"
+hmset movie:8 name "Jurassic World" year 2015 genre "Sci-fi" rating 6.9 country "USA" budget 215000000 age_restriction "12+"
+hmset movie:9 name "The Lion King" year 2019 genre "Drama" rating 6.8 country "USA" budget 260000000 age_restriction "6+"
+hmset movie:10 name "The Avengers" year 2012 genre "Superhero" rating 8.0 country "USA" budget 225000000 age_restriction "12+"
+sadd movie movie:1 movie:2 movie:3 movie:4 movie:5 movie:6 movie:7 movie:8 movie:9 movie:10
+zadd movie.rating.index 7.9 movie:1 8.4 movie:2 7.7 movie:3 7.9 movie:4 7.8 movie:5 8.4 movie:6 8.2 movie:7 6.9 movie:8 6.8 movie:9 8.0 movie:10
+zadd movie.budget.index 237000000 movie:1 400000000 movie:2 460000000 movie:3 200000000 movie:4 447000000 movie:5 400000000 movie:6 200000000 movie:7 215000000 movie:8 260000000 movie:9 225000000 movie:10

@@ -1,0 +1,3 @@
+Hadoop test text
+Word count example on Hadoop
+First test
